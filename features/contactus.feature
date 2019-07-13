@@ -27,3 +27,13 @@ And I enter the email
 And I enter the message
 When I click the Send button
 Then Appears a fail message "Please select a subject from the list provided."
+
+Scenario Outline: The Subject Heading description
+Given I click the Contact us button
+When I select "<subject>" like as subject heading
+Then Appears a "<num>" description that says "<description>"
+
+Examples:
+    | num | subject          | description                                   |
+    | 1   | Webmaster        | If a technical problem occurs on this website |
+    | 2   | Customer service | For any question about a product, an order    |

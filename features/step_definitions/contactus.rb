@@ -30,6 +30,14 @@ And('Appears a fail message {string}') do |text|
   checktext(:xpath, text, "//li[contains(.,'#{text}')]")
 end
 
+Then('Appears a {string} description that says {string}') do |num, description|
+  checktext(:id, description, "desc_contact#{num}")
+end
+
+When('I select {string} like as subject heading') do |subject|
+  select_option_from_dropdown(:id, :text, subject, 'id_contact')
+end
+
 And('I enter the email') do
   enter_text(:id, $email, 'email')
 end
