@@ -1,4 +1,4 @@
-Feature:   Contact us
+Feature: Contact us
 
 In order to can contact the customer service
 As an visitor to the page of My Store
