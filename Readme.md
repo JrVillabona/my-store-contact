@@ -14,6 +14,11 @@ Install Homebrew that is a package manager (MacOS):
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
 ```
+Clone the repository project:
+```
+git clone https://github.com/JrVillabona/my-store-contact.git
+cd my-store-contact
+```
 Install tools (MacOS):
 ```
 brew install ruby
@@ -21,11 +26,6 @@ sudo gem install bundler
 sudo gem install selenium-webdriver -v 3.2.1
 sudo gem install cucumber
 sudo bundle install
-```
-Clone the repository project:
-```
-git clone https://github.com/JrVillabona/my-store-contact.git
-cd my-store-contact
 ```
 ## Execution
 In order to execute the tests, you just need to execute the following command:
