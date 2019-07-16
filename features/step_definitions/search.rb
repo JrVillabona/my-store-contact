@@ -20,8 +20,16 @@ Then('Appears a warning message {string}') do |warning|
   check_element_text(:xpath, '0 results have been found.', "//span[contains(@class,'heading-counter')]", true)
 end
 
+And('The tittle of results have the word {string}') do |tittle|
+  check_element_partial_text(:class, tittle, 'product-container', true)
+end
+
 Then('Appears the search results of {string}') do |realclothes|
   wait_for_element_to_display(:id, 'center_column', 10)
   check_element_partial_text(:id, realclothes, 'center_column', true)
   check_element_text(:xpath, '0 results have been found.', "//span[contains(@class,'heading-counter')]", false)
+end
+
+Given('I clear the searchbox to be empty') do
+  clear_text(:name, 'search_query')
 end

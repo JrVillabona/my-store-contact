@@ -9,6 +9,7 @@ Scenario Outline: Search clothes successfully
 Given I enter a real "<realclothes>" name in the searchbox
 When I click the magnifying glass
 Then Appears the search results of "<realclothes>"
+And The tittle of results have the word "<realclothes>"
 
 Examples:
 | realclothes |
@@ -27,3 +28,9 @@ Examples:
 | Cake        |
 | Smoking     |
 | Glass       |
+
+Scenario: Search without enter a word in the searchbox
+
+Given I clear the searchbox to be empty
+When I click the magnifying glass
+Then Appears a warning message "Please enter a search keyword"
