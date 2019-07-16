@@ -8,25 +8,24 @@ Cucumber, along with Gherkin, is the testing framework. Gherkin is the business 
 Selenium is the HTTP driver used to navigate a browser from code. Often people refer to user interface automated tests as “Selenium Tests” but these are more accurately called “Behavior Driven” or “Acceptance Driven” tests.
 
 ## Installation
-First of all you need to have [Ruby](https://rubyinstaller.org/) and [Chrome](https://www.google.es/chrome/index.html) browser installed. Once you have them, in order to install the tests, follow the next steps from terminal:
+First of all you need to have [Ruby](https://rubyinstaller.org/), [Chrome](https://www.google.es/chrome/index.html) browser and [Git](https://git-scm.com/download) installed. Once you have them, in order to install the tests, follow the next steps from terminal:
 
 Install Homebrew that is a package manager (MacOS):
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
 ```
-Install Ruby (MacOS):
+Install tools (MacOS):
 ```
-sudo brew install ruby
-gem install bundler
+brew install ruby
+sudo gem install bundler
 sudo gem install selenium-webdriver -v 3.2.1
-gem install cucumber
-gem install rspec
+sudo gem install cucumber
+sudo bundle install
 ```
-
+Clone the repository project:
 ```
 git clone https://github.com/JrVillabona/my-store-contact.git
 cd my-store-contact
-gem install bundler
 ```
 ## Execution
 In order to execute the tests, you just need to execute the following command:
